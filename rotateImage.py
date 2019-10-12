@@ -3,11 +3,13 @@ import cv2
 # read image as grey scale
 
 def rotateFunction(img):
+    """ Perform the counter clockwise rotation of the input image (img) holding at the center
+    returns 90 degree rotation and 180 degree rotation.
+    """
 
     # img = cv2.imread(imagePath)
     # get image height, width
-    (h, w) = img.shape[:2
-             ]
+    (h, w) = img.shape[:2]
     # calculate the center of the image
     center = (w / 2, h / 2)
 
@@ -16,7 +18,7 @@ def rotateFunction(img):
 
     scale = 1.0
 
-    # Perform the counter clockwise rotation holding at the center
+    
     # 90 degrees
     M = cv2.getRotationMatrix2D(center, angle90, scale)
     rotated90 = cv2.warpAffine(img, M, (h, w))
