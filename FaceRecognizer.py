@@ -1,7 +1,7 @@
 # import the packages that are required
 
 from imutils import face_utils
-from imutils.face_utils import FaceAligner
+from imutils.face_utils import FaceAligner 
 import face_recognition
 import numpy as np
 import argparse
@@ -13,9 +13,10 @@ import uuid
 import rotateImage
 
 def rect_to_bb(rect):
-    # we will take the bounding box predicted by dlib library
-    # and convert it into (x, y, w, h) where x, y are coordinates
-    # and w, h are width and height
+    """ we will take the bounding box predicted by dlib library
+     and convert it into (x, y, w, h) where x, y are coordinates
+     and w, h are width and height
+    """
 
     x = rect.left()
     y = rect.top()
